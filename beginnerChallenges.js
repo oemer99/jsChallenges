@@ -61,7 +61,6 @@ console.log(calcPerimeter(6,7));
 function calcTriangleArea(base, height){
     return 0.5 * base * height
 }
-
 console.log(calcTriangleArea(10,10));
 
 /**
@@ -80,7 +79,152 @@ function appendFrontend(apple, frontend){
 console.log(appendFrontend("Apple", "Frontend"));
 
 /**
- * Q6
- * 
+ * Q6 Greater than 100?
+ * Given two numbers, return true if the sum of both numbers is greater than 100. Otherwise, return false
+    sumGreaterThan100(20,10) => false
+    sumGreaterThan100(50,60) => true
+ * */
+
+function sumGreaterThan100(num1, num2){
+      return num1 + num2 >= 100 ? true : false
+
+    //  if (num1 + num2 > 100) {
+    //   return true   
+    //  }
+    //  return false
+}
+console.log(sumGreaterThan100(100,-50));
+
+/**
+ * Q7. Less than or Equal to Zero
+ * Write a function that accepts a number and returns true if its less than or equal to zero, otherwise returns false
+    lessThanOrEqualToZero(3) => false
+    lessThanOrEqualToZero(0) => true
+*/
+
+function lessThanOrEqualToZero(num){
+    return num <= 0
+}
+console.log(lessThanOrEqualToZero(3));
+
+/**
+ * Q8. Opposite boolean
+ * Given a boolean, return the opposite boolean
+ * oppositeBoolean(true) => false
+ * oppositeBoolean(false) => true
+ */
+
+function oppositeBoolean(bool){
+    // if (bool) {
+    //     return false
+    // }
+    //  return true
+
+    return !bool        // !bool ist immer das Gegenteil
+}
+console.log(oppositeBoolean(false));
+
+/**
+ * Q9. Is not the number 0
+ * Given ANY element, return true if its NOT the number 0.
+ * isNotZero(5) => true
+ * isNotZero(0) => false
+ * isNotZero(Null) => true
+ */
+
+function isNotZero(zero){
+    // if (zero !== 0) {
+    //     return true
+    // }
+    // return false
+
+    return zero !== 0
+}
+console.log(isNotZero(5));
+
+
+/**
+ * Q10.
+ * Calculate the remainer
+ * Given two numbers, return their remainder when divided by each other
+ * calcRemainder(4,2) = 0
+ * calcRemainder(7,8) = 7
+ * calcRemainder(9,8) = 1
+ */
+
+function calcRemainder(num1,num2){
+    return num1 % num2
+}
+console.log(calcRemainder(9,8));
+
+/**
+ * Q11. Is the number odd
+ * Given two numbers, return true if the number is odd
+ * isOdd(1) = true
+ * isOdd(2) = false
+ * isOdd(3) = true
  * 
  */
+
+function isOdd(num){
+    // if (num % 2) {
+    //     return true
+    // }
+    // return false
+
+    return num % 2 !== 0
+}
+console.log(isOdd(3));
+
+/**
+ * Q12. If anumber is even, return 1 otherwise return -1
+ * Create a function that takes a number argument and returns 1 if the number is even. If the number is odd return -1
+ * booleanInteger(1) => -1
+ * booleanInteger(2) => 1
+ * booleanInteger(5) => -1
+ */
+
+function booleanInteger(num){
+    // if (num % 2) {
+    //     return -1
+    // }
+    // return 1
+
+    return num % 2 ? -1 : 1  //one line  ternary operator
+}
+console.log(booleanInteger(2));
+
+/**
+ * Q13. Check if a user is logged in AND subscribed
+ * Create a function that takes in two strings. If the first string is equal to "LOGGED_IN" AND the second string is equal to "SUBSCRIBED" return false.
+ * 
+ * isLoggedInandSubscribed("LOGGED_IN", "SUBSCRIBED") => true 
+ * isLoggedInandSubscribed("LOGGED_IN", "UNSUBSCRIBED") => false
+ * isLoggedInandSubscribed("LOGGED_OUT", "SUBSCRIBED") => false
+ */
+
+function isLoggedInandSubscribed(log, status){
+    // if (log === "LOGGED_IN" && status === "SUBSCRIBED") {
+    //     return true
+    // }
+    // return false
+
+   return log === "LOGGED_IN" && status === "SUBSCRIBED" // one line
+}
+console.log(isLoggedInandSubscribed("LOGGED_IN", "SUBSCRIBED"));
+
+/**
+ * Q14.
+ * Check if a user is logged in Or subscribed
+ * Create a function that takes in two strings. If the first string is equal to "LOGGED_IN" AND the second string is equal to "SUBSCRIBED" return false.
+ * 
+ * isLoggedInOrSubscribed("LOGGED_IN", "SUBSCRIBED") => true 
+ * isLoggedInOrSubscribed("LOGGED_IN", "UNSUBSCRIBED") => true
+ * isLoggedInOrSubscribed("LOGGED_OUT", "UNSUBSCRIBED") => false
+ */
+
+
+function isLoggedInOrSubscribed(log, status){
+   return log === "LOGGED_IN" || status === "SUBSCRIBED" // one line
+}
+console.log(isLoggedInOrSubscribed("LOGGED_OUT", "SUBSCRIBED"));
